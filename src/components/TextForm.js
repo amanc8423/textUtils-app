@@ -58,17 +58,17 @@ const[text,setText]=useState('Enter text here2')
 <div className="mb-3">
   <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'grey'}} id="myBox" rows="8"></textarea>
 </div>
-<button className="btn btn-primary mx-1" onClick ={handleUpClick}>To_Uppercase</button>
-<button className="btn btn-primary mx-1" onClick ={handleLoClick}>To_Lowercase</button>
-<button className="btn btn-primary mx-1" onClick ={handleClear}>To_Clear</button>
-<button className="btn btn-primary mx-1" onClick ={handleCopy}>To_Copy</button>
-<button className="btn btn-primary mx-1" onClick ={handleExtraSpaces}>Remove_ExtraSpces</button>
+<button className="btn btn-primary mx-1 my-1" onClick ={handleUpClick}>To_Uppercase</button>
+<button className="btn btn-primary mx-1 my-1" onClick ={handleLoClick}>To_Lowercase</button>
+<button className="btn btn-primary mx-1 my-1" onClick ={handleClear} disabled={text.length===0}>To_Clear</button>
+<button className="btn btn-primary mx-1 my-1" onClick ={handleCopy}>To_Copy</button>
+<button className="btn btn-primary mx-1 my-1" onClick ={handleExtraSpaces}>Remove_ExtraSpces</button>
     </div>
 
 <div className="container my-3" style={{backgroundColor:props.mode==='dark'?'grey':'white'}}>
     <h2>your text summary</h2>
 
-    <p>{text.length} characters and {text.split(" ").length}</p>
+    <p>{text.length} characters and {text.split(" ").filter((e)=>{return e.length!==0}).length} words</p>
     <p>{0.008 *  text.split(" ").length}  Minutes Read</p>
 
 <h2>Preview</h2>

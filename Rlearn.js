@@ -14,8 +14,8 @@ JSX elements are basically objects that are created from a combination of HTML-l
 10. react router - //router
 https://v5.reactrouter.com/web/guides/quick-start
 
-11. 
-
+11. deploy create react app - https://create-react-app.dev/docs/deployment/   then go on github pages
+12. npm run buld - it will make static website 
 
 
 

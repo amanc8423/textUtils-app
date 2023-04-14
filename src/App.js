@@ -2,13 +2,12 @@ import Navbar from './components/Navbar';
 import './App.css';
 import { useState } from 'react';
 import TextForm from './components/TextForm';
-import About from './components/About';
+  import About from './components/About';
 import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -66,7 +65,7 @@ setAlert(null);
 
 <div className="conatainer">
 
-<Routes>
+   <Routes>
           {/* <Route path="/about">
             <About />
           </Route>
@@ -78,17 +77,17 @@ setAlert(null);
 
           <Route exact path="/about" element={<About />} />
         <Route exact path="/" element={<TextForm showAlert = {showAlert} mode={mode} heading="Enter text below to analyze"/>} />
-        {/* <Route exact path="/path3" element={<component3 />} /> */}
+        <Route exact path="/path3" element={<component3 />} />
 
 
         </Routes>
-
+        
+        {/* <TextForm showAlert = {showAlert} mode={mode} heading="Enter text below to analyze"/> */}
 
 {/* <About/>  */}
 </div>
 
-
-</Router>
+ </Router>
 
 
 </>
