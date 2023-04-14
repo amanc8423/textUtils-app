@@ -9,6 +9,7 @@ export default function TextForm(props) {
 //setText("you have clicked on handleUpClick");
 let newText = text.toUpperCase();
 setText(newText)
+props.showAlert("Converted to uppercase","success");
     }
 
     const handleLoClick=()=>{
@@ -16,6 +17,7 @@ setText(newText)
         //setText("you have clicked on handleUpClick");
         let newText = text.toLowerCase();
         setText(newText)
+        props.showAlert("Converted to Lowercase","success");
             }
 
             const handleClear=()=>{
@@ -35,6 +37,10 @@ setText(newText)
         navigator.clipboard.writeText(text.value);
     }
 
+    const handleExtraSpaces=()=>{
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "))
+    }
 
 
     //const[count,setCount]=useState(0);
@@ -56,6 +62,7 @@ const[text,setText]=useState('Enter text here2')
 <button className="btn btn-primary mx-1" onClick ={handleLoClick}>To_Lowercase</button>
 <button className="btn btn-primary mx-1" onClick ={handleClear}>To_Clear</button>
 <button className="btn btn-primary mx-1" onClick ={handleCopy}>To_Copy</button>
+<button className="btn btn-primary mx-1" onClick ={handleExtraSpaces}>Remove_ExtraSpces</button>
     </div>
 
 <div className="container my-3" style={{backgroundColor:props.mode==='dark'?'grey':'white'}}>

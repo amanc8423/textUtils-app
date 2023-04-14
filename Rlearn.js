@@ -10,6 +10,11 @@ JSX elements are basically objects that are created from a combination of HTML-l
 6. proptypes
 7. hooks 
 8. event
+9. fav icon generator to get favicon
+10. react router - //router
+https://v5.reactrouter.com/web/guides/quick-start
+
+11. 
 
 
 
